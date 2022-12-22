@@ -1,0 +1,250 @@
+@import "vars"
+@import "fonts"
+
+*
+    box-sizing: border-box
+
+=reg
+    font-family: 'Roboto', sans-serif
+    font-weight: 400
+
+=bold
+    font-family: 'Roboto', sans-serif
+    font-weight: 700
+
+body
+    +reg
+    margin: 0
+.main
+    background-color: $main-bg
+.container
+    max-width: 950px
+    width: 96%
+    margin: auto
+    @media ( max-width: 600px )
+        width: 90%
+.section-title
+    font-size: 36px
+    color: $text
+    +bold
+                
+
+
+.about
+    padding: 70px 0 150px 0
+    @media ( max-width: 928px )
+        padding-bottom: 30px
+    &-block
+        display: flex
+        justify-content: space-between
+        align-items: center
+        @media ( max-width: 928px )
+            flex-direction: column
+    &-text
+        @media ( max-width: 928px )
+            text-align: center
+        &__subtitle
+            font-size: 24px
+            color: $subtitle
+            display: block
+            margin-bottom: 14px
+            @media ( max-width: 600px )
+                font-size: 16px
+            @media ( max-width: 400px )
+                margin-bottom: 5px
+        &__title
+            font-size: 50px
+            color: $text
+            +bold
+            margin: 0
+            @media ( max-width: 600px )
+                font-size: 24px
+        &__desc
+            font-size: 16px
+            line-height: 28px
+            color: $text
+            max-width: 420px
+            display: block
+            margin: 20px 0 40px 0
+            @media ( max-width: 600px )
+                font-size: 14px
+                line-height: 24px
+    &-image
+        @media ( max-width: 928px )
+            order: -1
+            margin-bottom: 50px
+        @media ( max-width: 400px )
+            margin-bottom: 20px
+        img
+            border-radius: 250px
+            @media ( max-width: 600px )
+                width: 230px
+                height: 230px
+            @media ( max-width: 400px )
+                width: 107px
+                height: 107px
+
+
+.projects
+    padding: 60px 0 100px 0
+    @media ( max-width: 868px )
+        padding: 50px 0
+    &__title
+        margin-bottom: 84px
+        @media ( max-width: 868px )
+            text-align: center
+        @media ( max-width: 600px )
+            font-size: 19px
+            margin-bottom: 50px
+    &-block
+        display: flex
+        align-items: center
+        @media ( max-width: 868px )
+            flex-direction: column
+            align-items: left
+    &-img
+        margin-right: 65px
+        @media ( max-width: 868px )
+            margin: auto
+            margin-bottom: 60px
+        @media ( max-width: 600px )
+            margin: unset
+            margin-bottom: 46px
+        img
+            border-radius: 6px
+            @media ( max-width: 600px )
+                width: 250px
+                height: 198px
+    &-text
+        @media ( max-width: 868px )
+            margin-bottom: 50px
+        &__title
+            margin: 0 0 40px 0
+            font-size: 24px
+            +bold
+            color: $text
+            @media ( max-width: 868px )
+                text-align: center
+            @media ( max-width: 600px )
+                font-size: 18px
+                text-align: left
+    &-list
+        list-style-type: none
+        padding: 0
+        display: flex
+        flex-wrap: wrap
+        @media ( max-width: 868px )
+            justify-content: center
+        &__item
+            max-width: 527px
+            margin-right: 44px
+            display: flex
+            margin-bottom: 44px
+            &:last-child
+                margin: 0
+            @media ( max-width: 600px )
+                width: 100%
+                margin-bottom: 33px
+        &__subtitle
+            font-size: 18px
+            +bold
+            color: $text
+            margin: 0
+            margin-bottom: 7px
+        &__desc
+            font-size: 16px
+            color: $text
+            line-height: 24px
+            @media ( max-width: 600px )
+                font-size: 14px
+        &__icon
+            margin-right: 16px
+            margin-top: 7px
+    &__slider
+        text-align: center
+        @media ( max-width: 600px )
+            margin-top: 30px
+.projects__slider
+    text-align: left
+.slick-initialized .slick-slide
+    display: flex
+.slick-dots li button:before
+    font-size: 0
+.slick-dots li button
+    width: 10px
+    height: 10px
+.slick-dots li
+    width: auto
+    height: auto
+.slick-dots
+    bottom: -50px
+    li
+        button
+            border: 4px solid #FFBB01
+            border-radius: 100px
+li.slick-active
+    background-color: #FFBB01
+    border-radius: 100px
+
+
+
+.contacts
+    padding: 60px 0 140px 0
+    @media ( max-width: 600px )
+        padding: 50px 0
+    &-block
+        display: flex
+        @media ( max-width: 850px )
+            flex-direction: column
+    &__title
+        margin-bottom: 85px
+        @media ( max-width: 850px )
+            text-align: center
+        @media ( max-width: 600px )
+            font-size: 19px
+            margin-bottom: 50px
+    &-text
+        @media ( max-width: 850px )
+            margin-top: 100px
+        @media ( max-width: 600px )
+            margin-top: 60px
+            
+    &-wrap
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        @media ( max-width: 850px )
+            display: block
+        @media ( max-width: 600px )
+            margin-bottom: 100px
+        &__item
+            margin-right: 100px
+            margin-bottom: 53px
+            &:last-child
+                margin-right: 0
+        &__title
+            font-size: 24px
+            +bold
+            color: $text
+            margin: 0
+            margin-bottom: 15px
+            @media ( max-width: 600px )
+                font-size: 18px
+                margin-bottom: 12px
+            
+        &__link
+            a
+                font-size: 16px
+                text-decoration: none
+                color: $text
+                @media ( max-width: 600px )
+                    font-size: 14px
+    &__socials
+        margin-bottom: 70px
+        a
+            margin-right: 20px
+            &:last-child
+                margin-right: 0
+        @media ( max-width: 600px )
+            margin-bottom: 27px
+
